@@ -4,6 +4,7 @@ let arr = fs.readFileSync('videogames.json');
 let videogames = JSON.parse(arr);
 
 //console.log(videogames)
+
 module.exports = videogames
 
 
@@ -48,3 +49,21 @@ module.exports = videogames
       console.log(err);
     })*/
 
+// function updating(name){
+//     fs.readFile('videogames.json', (err, data) => {
+//         if (err) throw err;
+//         let videogame = JSON.parse(data);
+//         //console.log(videogames.filter(videogame => videogame.id == 1));
+        
+//         videogames.forEach(videogame => {
+//             if(videogame.id == 1){
+//                 videogame.name=name;
+//             }
+//         });
+        
+        
+//         console.log(videogames);
+//     });
+// }
+
+// updating('Mario Bros.');

@@ -61,6 +61,13 @@ router.delete('/:id', (req, res) => {
 
     if (exist) {
         res.json( { msg: 'Student deleted', student: students.filter(student => student.id !== parseInt(req.params.id)) });
+        let pos;
+        students.forEach(student => {
+            if (student.id === parseInt(req.params.id)) {
+                pos = students.indexOf(student);
+            }
+        });
+        students.splice(pos,1);
     } else {
         res.status(400).json({ msg: `No student with the id ${req.params.id}`});
     }
