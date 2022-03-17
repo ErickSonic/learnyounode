@@ -1,29 +1,29 @@
 const qrcode = require('qrcode-terminal');
-const dat = require('../readDB')
+const readDB = require('../readDB')
 
 const { Client } = require('whatsapp-web.js');
 const client = new Client();
-
-
 
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
 
-client.on('ready', () => {
-    console.log('Client is ready!');
-});
-
-console.log(dat);
 
 /*client.on('message', message => {
 	console.log(message.body);
 });*/
 
-client.on('message', message => {
-	if(message) {
-		client.sendMessage(message.from, 'Hola');
-	}
+readDB.catch(console.error).then(val => {
+	client.on('ready', () => {
+    console.log('Client is ready!');
+		val.forEach(birthdayBoy => {
+			console.log(birthdayBoy.name + " " + birthdayBoy.phone);
+			const number = "521" + birthdayBoy.phone;
+			//console.log(number)
+			const chatId = number + "@c.us";
+			client.sendMessage(chatId, 'Feliz cumpleaños ' + birthdayBoy.name + '!');
+		});
+	});
 });
 
 module.exports = client;

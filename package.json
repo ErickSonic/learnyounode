@@ -1,7 +1,6 @@
 {
   "name": "learnyounode",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "example": "examples"
@@ -29,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/ErickSonic/learnyounode/issues"
   },
-  "homepage": "https://github.com/ErickSonic/learnyounode#readme"
+  "homepage": "https://github.com/ErickSonic/learnyounode#readme",
+  "description": ""
 }

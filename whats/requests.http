@@ -1,0 +1,28 @@
+###
+GET http://localhost:6061/api/contacts HTTP/1.1
+
+###
+GET http://localhost:6061/api/contacts/62318772a01b055e29cd40d3 HTTP/1.1
+
+###
+POST http://localhost:6061/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"Jazer Torres",
+  "phone":"8261297233",
+  "date":"26/05"
+}
+
+###
+PUT http://localhost:6061/api/contacts/6232ce6508c4fe30a7896d95 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Eliseo Soberano",
+  "phone": "8267695150",
+  "date": "17/03"
+}
+
+###
+DELETE http://localhost:6061/api/contacts/6232c93585b7df5a0d771aff HTTP/1.1
