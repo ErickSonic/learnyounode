@@ -17,7 +17,7 @@ readDB.catch(console.error).then(val => {
 	client.on('ready', () => {
     console.log('Client is ready!');
 		val.forEach(birthdayBoy => {
-			console.log(birthdayBoy.name + " " + birthdayBoy.phone);
+			//console.log(birthdayBoy.name + " " + birthdayBoy.phone);
 			const number = "521" + birthdayBoy.phone;
 			//console.log(number)
 			const chatId = number + "@c.us";
