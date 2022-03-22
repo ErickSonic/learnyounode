@@ -1,6 +1,8 @@
- const express = require('express')
+const express = require('express')
+const port = process.argv[2]
+
     const app = express()
-    app.get('/', function(req, res) {
+    app.get('/home', function(req, res) {
       res.end('Hello World!')
     })
-    app.listen(3000)
+    app.listen(port)
