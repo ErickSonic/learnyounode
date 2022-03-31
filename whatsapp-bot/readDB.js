@@ -38,4 +38,3 @@ async function contactList(client){
 };
 
 module.exports = readDB();
-//readDB().catch(console.error);

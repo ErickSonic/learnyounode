@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const contactRoutes = require('./routes/contact')
-const client = require('./bot/whats')
+const contactRoutes = require('./routes/contact');
+const client = require('./bot/whats');
 require("dotenv").config();
 
 const app = express();

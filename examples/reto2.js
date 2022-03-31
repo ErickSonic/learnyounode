@@ -32,4 +32,4 @@ fs.writeFile(
   else {
     console.log("File written succesfully");
   };
-  })
+})
