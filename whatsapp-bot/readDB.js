@@ -1,4 +1,3 @@
-const fs = require ('fs')
 let MongoClient = require('mongodb').MongoClient;
 
 let todaydate = new Date();

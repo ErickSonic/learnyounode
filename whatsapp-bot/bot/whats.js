@@ -1,8 +1,18 @@
 const qrcode = require('qrcode-terminal');
 const readDB = require('../readDB')
 
-const { Client } = require('whatsapp-web.js');
-const client = new Client();
+const { Client, LocalAuth } = require('whatsapp-web.js');
+
+// const client = new Client({ 
+// 	puppeteer: { 
+// 		executablePath: '/usr/bin/brave-browser-stable',
+// 	 }, 
+// 	authStrategy: new LocalAuth({
+// 		  clientId: "client-one" 
+// 		}), 
+// 	puppeteer: {
+// 			headless: false, }
+//  });
 
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});

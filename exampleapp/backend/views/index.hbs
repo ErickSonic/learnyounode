@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-between align-items-center">
+    <h4>Students</h4>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add student
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/students" method="POST" class=" mb-4">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add student</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <div class="form-group">
+                            <label for="matricula">Matricula</label>
+                            <input type="text" name="matricula" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {{#each students}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <img style="max-height:100%; max-width:100%;"
+                    src="https://academico.um.edu.mx/academico/foto?Codigo={{this.matricula}}" alt="">
+                <p>Matricula: {{this.matricula}}</p>
+                <p>Name: {{this.name}}</p>
+                <p>Email: {{this.email}}</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

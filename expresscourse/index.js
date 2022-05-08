@@ -16,10 +16,7 @@ app.set('view engine', 'handlebars');
 
 // Homepage route
 app.get('/', (req, res) => 
-    res.render('index', {
-        title: 'WebDev Students',
-        students
-    })
+    res.render('index')
 );
 
 // API route
