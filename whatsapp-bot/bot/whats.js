@@ -3,10 +3,12 @@ const readDB = require('../readDB')
 
 const { Client, LocalAuth } = require('whatsapp-web.js');
 
+const client = new Client();
+
 // const client = new Client({ 
 // 	puppeteer: { 
 // 		executablePath: '/usr/bin/brave-browser-stable',
-// 	 }, 
+// 	 },
 // 	authStrategy: new LocalAuth({
 // 		  clientId: "client-one" 
 // 		}), 
